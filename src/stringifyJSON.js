@@ -20,9 +20,13 @@ var stringifyJSON = function(obj) {
 		});
 		return '[' + stringArray + ']';
 	} else if (typeof obj === 'object') {
-		var objKeys = [];
+		var objKeysAndValues = [];
 		for (var key in obj) {
-			
-		}
+			if (stringifyJSON(obj[key]) === 'undefined') {
+				return '{}';
+			} 
+			objKeysAndValues.push(stringifyJSON(key) + ':' + stringifyJSON(obj[key]));
+		} 
+		return '{' + objKeysAndValues.join(',') + '}';
 	}
 }
