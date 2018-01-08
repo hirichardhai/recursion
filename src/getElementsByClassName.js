@@ -14,6 +14,8 @@ var getElementsByClassName = function(className
   	if (classes && classes.contains(className)) {
   		result.push(element);
   	}
-  	
+  	for (var i = 0; i < element.childNodes.length; i++) {
+  		search(element.childNodes[i]);
+  	}
   }
 };
