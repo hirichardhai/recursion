@@ -12,10 +12,17 @@ var stringifyJSON = function(obj) {
 		return obj.toString();
 	} else if (obj === null) {
 		return 'null';
+	} else if (typeof obj === 'undefined') {
+		return 'undefined';
 	} else if (Array.isArray(obj)) {
 		var stringArray = obj.map(function(obj) {
 			return stringifyJSON(obj)
 		});
 		return '[' + stringArray + ']';
+	} else if (typeof obj === 'object') {
+		var objKeys = [];
+		for (var key in obj) {
+			
+		}
 	}
 }
