@@ -8,3 +8,13 @@ var getElementsByClassName = function(className
 ) {
   // your code here
 };
+
+var stringifyJSdON = function(obj) {
+	if (typeof obj === 'string') {
+		return '"' + obj + '"';
+	} else if (typeof obj === 'boolean') {
+		return obj.toString();
+	} else if (typeof obj === 'number') {
+		return obj.toString();
+	} else if ()
+}
