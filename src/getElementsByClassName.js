@@ -7,4 +7,13 @@
 var getElementsByClassName = function(className
 ) {
   // your code here
+  var result = [];
+
+  function search(element) {
+  	var classes = element.classList;
+  	if (classes && classes.contains(className)) {
+  		result.push(element);
+  	}
+  	
+  }
 };
