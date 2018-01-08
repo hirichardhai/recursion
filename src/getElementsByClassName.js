@@ -18,4 +18,7 @@ var getElementsByClassName = function(className
   		search(element.childNodes[i]);
   	}
   }
+
+  search(document.body);
+  return result;
 };
